@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- 连接4要素 -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql:///hibernate5</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>
+        <!-- 方言 -->
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <!-- c3p0数据库连接池 -->
+        <property name="hibernate.connection.provider_class">org.hibernate.c3p0.internal.C3P0ConnectionProvider</property>
+        <!-- 当前Session上下文 -->
+        <property name="current_session_context_class">thread</property>
+        <!-- 自动建表 -->
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+        <!-- 显示并格式化SQL -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">false</property>
+        <!-- 注册映射文件 -->
+        <mapping resource="com/discry/hibernate/a/one/Student.hbm.xml"/>
+        <mapping resource="com/discry/hibernate/a/two/Teacher.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>
