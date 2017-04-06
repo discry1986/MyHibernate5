@@ -1,3 +1,5 @@
+package com.discry.hibernate.a.two;
+
 import com.discry.hibernate.a.one.HibernateUtils;
 import com.discry.hibernate.a.one.Student;
 import org.hibernate.Session;

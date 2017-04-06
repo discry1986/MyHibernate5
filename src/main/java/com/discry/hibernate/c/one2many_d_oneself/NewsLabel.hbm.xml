@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.discry.hibernate.c.one2many_d_oneself">
+    <class name="NewsLabel">
+        <id name="id">
+            <generator class="native"/>
+        </id>
+        <property name="name" column="t_name"/>
+        <property name="content" column="t_content"/>
+        <set name="childNewLabels" cascade="save-update">
+            <key column="pid"></key>
+            <one-to-many class="NewsLabel"/>
+        </set>
+        <many-to-one name="parentNewLabel" column="pid" cascade="save-update" class="NewsLabel"/>
+    </class>
+</hibernate-mapping>

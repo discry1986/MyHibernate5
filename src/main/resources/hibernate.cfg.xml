@@ -16,12 +16,37 @@
         <!-- 当前Session上下文 -->
         <property name="current_session_context_class">thread</property>
         <!-- 自动建表 -->
-        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
         <!-- 显示并格式化SQL -->
         <property name="show_sql">true</property>
-        <property name="format_sql">false</property>
-        <!-- 注册映射文件 -->
+        <property name="format_sql">true</property>
+        <!--
         <mapping resource="com/discry/hibernate/a/one/Student.hbm.xml"/>
         <mapping resource="com/discry/hibernate/a/two/Teacher.hbm.xml"/>
+        <mapping resource="com/discry/hibernate/b/Course.hbm.xml"/>
+        -->
+        <mapping resource="com/discry/hibernate/c/one2many_s/Country.hbm.xml"/>
+        <mapping resource="com/discry/hibernate/c/one2many_s/Minister.hbm.xml"/>
+        <mapping resource="com/discry/hibernate/c/one2many_d/Country.hbm.xml"/>
+        <mapping resource="com/discry/hibernate/c/one2many_d/Minister.hbm.xml"/>
+        <mapping resource="com/discry/hibernate/c/one2many_d_oneself/NewsLabel.hbm.xml"/>
+        <mapping resource="com/discry/hibernate/c/many2one_s/Country.hbm.xml"/>
+        <mapping resource="com/discry/hibernate/c/many2one_s/Minister.hbm.xml"/>
+        <mapping resource="com/discry/hibernate/d/many2many_s/Course.hbm.xml"/>
+        <mapping resource="com/discry/hibernate/d/many2many_s/Student.hbm.xml"/>
+        <mapping resource="com/discry/hibernate/d/many2many_d/Course.hbm.xml"/>
+        <mapping resource="com/discry/hibernate/d/many2many_d/Student.hbm.xml"/>
+
+        <mapping resource="com/discry/hibernate/e/leftjoinfetch/Country.hbm.xml"/>
+        <mapping resource="com/discry/hibernate/e/leftjoinfetch/Minister.hbm.xml"/>
+
+        <mapping resource="com/discry/hibernate/e/getload/Student.hbm.xml"/>
+        <mapping resource="com/discry/hibernate/e/multi/Minister.hbm.xml"/>
+        <mapping resource="com/discry/hibernate/e/multi/Country.hbm.xml"/>
+
+        <mapping resource="com/discry/hibernate/e/single/Minister.hbm.xml"/>
+        <mapping resource="com/discry/hibernate/e/single/Country.hbm.xml"/>
+
+        <mapping resource="com/discry/hibernate/f/cache/Student.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

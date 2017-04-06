@@ -1,4 +1,5 @@
-import com.discry.hibernate.a.one.Student;
+package com.discry.hibernate.a.one;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

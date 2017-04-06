@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.discry.hibernate.e.multi">
+    <class name="Country">
+        <id name="cid">
+            <generator class="native"/>
+        </id>
+        <property name="cname" column="c_name"/>
+        <set name="ministers" cascade="all-delete-orphan" fetch="select" lazy="extra">
+            <key column="country_id"></key>
+            <one-to-many class="Minister" />
+        </set>
+    </class>
+</hibernate-mapping>

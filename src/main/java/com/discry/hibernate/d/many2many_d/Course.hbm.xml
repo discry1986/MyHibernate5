@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.discry.hibernate.d.many2many_d">
+    <class name="Course" table="t_course">
+        <id name="cid">
+            <generator class="native"/>
+        </id>
+        <property name="cname" column="course_name"/>
+        <set name="studentSet" cascade="save-update" table="student_course_relation">
+            <key column="courseId"></key>
+            <many-to-many class="Student" column="studentId"></many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

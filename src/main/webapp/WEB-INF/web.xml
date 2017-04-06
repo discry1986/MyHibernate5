@@ -6,7 +6,7 @@
   <display-name>Archetype Created Web Application</display-name>
     <context-param>
         <param-name>javax.faces.CONFIG_FILES</param-name>
-        <param-value>/hibernate.cfg.xml,/com/discry/hibernate/a/one/Student.hbm.xml</param-value>
+        <param-value>/hibernate.cfg.xml,/com/discry/hibernate/a/one/Student.hbm.xml,/com/discry/hibernate/b/Course.hbm.xml</param-value>
     </context-param>
     <servlet>
         <servlet-name>Faces Servlet</servlet-name>

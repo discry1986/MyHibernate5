@@ -2,8 +2,8 @@
 <!DOCTYPE hibernate-mapping PUBLIC
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping>
-    <class name="com.discry.hibernate.a.one.Student" table="t_student">
+<hibernate-mapping package="com.discry.hibernate.e.getload">
+    <class name="Student" table="student">
         <id name="sid" column="t_id">
             <generator class="native"/>
         </id>
