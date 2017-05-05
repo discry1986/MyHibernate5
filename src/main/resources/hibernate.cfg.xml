@@ -25,6 +25,11 @@
         <mapping resource="com/discry/hibernate/a/two/Teacher.hbm.xml"/>
         <mapping resource="com/discry/hibernate/b/Course.hbm.xml"/>
         -->
+        <!-- 开启二级缓存 -->
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+        <!-- 注册二级缓存区域工厂 -->
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+
         <mapping resource="com/discry/hibernate/c/one2many_s/Country.hbm.xml"/>
         <mapping resource="com/discry/hibernate/c/one2many_s/Minister.hbm.xml"/>
         <mapping resource="com/discry/hibernate/c/one2many_d/Country.hbm.xml"/>
@@ -48,5 +53,15 @@
         <mapping resource="com/discry/hibernate/e/single/Country.hbm.xml"/>
 
         <mapping resource="com/discry/hibernate/f/cache/Student.hbm.xml"/>
+        <mapping resource="com/discry/hibernate/f/snapshot/Student.hbm.xml"/>
+        <mapping resource="com/discry/hibernate/f/sessionFlush/Student.hbm.xml"/>
+
+        <mapping resource="com/discry/hibernate/f/level2cache/Country.hbm.xml"/>
+        <mapping resource="com/discry/hibernate/f/level2cache/Minister.hbm.xml"/>
+
+        <!-- 指定类缓存 -->
+        <class-cache class="com.discry.hibernate.f.level2cache.Country" usage="read-only"/>
+        <class-cache class="com.discry.hibernate.f.level2cache.Minister" usage="read-only"/>
+        <collection-cache collection="com.discry.hibernate.f.level2cache.Country.ministers" usage="read-only"/>
     </session-factory>
 </hibernate-configuration>

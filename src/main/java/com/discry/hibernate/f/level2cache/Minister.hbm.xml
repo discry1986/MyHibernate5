@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.discry.hibernate.f.level2cache">
+    <class name="Minister" table="t_level2cache_minister">
+        <id name="mid">
+            <generator class="native"/>
+        </id>
+        <property name="mname" column="m_name"/>
+        <many-to-one name="country" class="Country" column="country_id" cascade="all"/>
+    </class>
+</hibernate-mapping>

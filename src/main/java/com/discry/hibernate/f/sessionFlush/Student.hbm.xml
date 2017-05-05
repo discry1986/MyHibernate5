@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.discry.hibernate.f.sessionFlush.Student" table="t_sessionFlush_student">
+        <id name="sid" column="t_id">
+            <generator class="native"/>
+        </id>
+        <property name="stuNo" column="t_StuNo"></property>
+        <property name="name" column="t_name"></property>
+        <property name="score" column="t_score"></property>
+    </class>
+</hibernate-mapping>

@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="myhibernate5:war">
     <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="myhibernate5.war">
+    <root id="archive" name="myHibernate5.war">
       <element id="artifact" artifact-name="myhibernate5:war exploded" />
     </root>
   </artifact>
